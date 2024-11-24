@@ -45,7 +45,7 @@ Also, if you have a non-PatchRAM device (or you're not sure), install one of Brc
 
 ### BrcmBluetoothInjector.kext
 
-To be used for macOS 10.11-11. Use BrcmBluetoothInjectorLetacy.kext for older system. Using BrcmPatchRAM3.kext also requires BrcmBluetoothInjector.kext as changes in macOS Catalina (10.15) requires the use of a separate injector kext. This is due to the removal of the following IOCatalogue methods:
+To be used for macOS 10.11-11. Use BrcmBluetoothInjectorLegacy.kext for older systems. Using BrcmPatchRAM3.kext also requires BrcmBluetoothInjector.kext as changes in macOS Catalina (10.15) requires the use of a separate injector kext. This is due to the removal of the following IOCatalogue methods:
 
     IOCatalogue::addDrivers, IOCatalogue::removeDrivers and IOCatalogue::startMatching
 
@@ -255,6 +255,7 @@ For example, to change `mPostResetDelay` to 400 ms, use the kernel boot argument
 
 Note: Some with the typical "wake from sleep" problems are reporting success with: `bpr_probedelay=100 bpr_initialdelay=300 bpr_postresetdelay=300`.  Or slightly longer delays: `bpr_probedelay=200 bpr_initialdelay=400 bpr_postresetdelay=400`.
 
+On macOS 12.4 and newer versions, a new address check has been introduced in `bluetoothd`, thus an error will be triggered if two Bluetooth devices have the same address. However, this check can be circumvented by adding the boot argument `-btlfxallowanyaddr`.
 
 ### Details
 
@@ -335,7 +336,7 @@ http://drivers.softpedia.com/get/BLUETOOTH/Broadcom/ASUS-X99-DELUXE-Broadcom-Blu
 
 For an automatic update you can unpack the Broadcom USB bluetooth files and run `firmware_update.tool`.
 
-*Should you come across newer drivers than 12.0.0.9860, please let me know.*
+*Should you come across newer drivers than 12.0.1.1012, please let me know.*
 
 In order to get the device specific firmware for your device take the following steps:
 

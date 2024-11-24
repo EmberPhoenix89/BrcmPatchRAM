@@ -1,7 +1,35 @@
 BrcmPatchRAM Changelog
 ======================
+#### v2.6.9
+- Added constants for macOS 15 support
+
+#### v2.6.8
+- Added vendor callback patch for Bluetooth power status toggling on macOS 13.3+ (thx @zxystd)
+- Added patch that skips Internal Bluetooth Controller NVRAM checking (thx @zxystd)
+
+#### v2.6.7
+- Added constants for macOS 14 support
+
+#### v2.6.6
+- Added firmware for legacy BCM20702A1 (thx @chapuza)
+
+#### v2.6.5
+- Fixed legacy Mac compatibility (thx @AsdMonio)
+
+#### v2.6.4
+- Improve compatibility with BCM43142A0 on macOS Big Sur (thx lalithkota)
+
+#### v2.6.3
+- Added constants for macOS 13 support
+- Fixed Skip Address Check patch for 13.0 Beta 1 and newer
+
+#### v2.6.2
+- Added Skip Address Check patch for 12.4 Beta 3 and newer (thx @khronokernel)
+
 #### v2.6.1
 - Improved BlueToolFixup compatibility with macOS 12b10 (thx @dhinakg, @williambj1)
+- Fixed bluetooth support on MBP15,4 and other similar boards (thx @dhinakg, @usr-sse2)
+- Fixed bluetooth not working on macOS 12 after the first power cycle (thx @williambj1, @zxystd)
 
 #### v2.6.0
 - Added BlueToolFixup for macOS 12 compatibility
